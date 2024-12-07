@@ -19,11 +19,7 @@ const navbar = () => {
                 Home
               </Link>
             </li>
-            <li>
-              <Link to="services" spy={true} smooth={true}>
-                About
-              </Link>
-            </li>
+           
             <li>
               <Link to="works" spy={true} smooth={true}>
                 Experience

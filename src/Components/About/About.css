@@ -1,0 +1,109 @@
+/* About Section Container */
+.about {
+    position: relative;
+    padding: 4rem 2rem;
+    text-align: center;
+    /* background-color: #f9f9f9; */
+    margin-top: 6rem;
+    /* margin-bottom: 6rem; */
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    /* overflow: hidden; */
+  }
+  
+  /* Blur Effect */
+  .blur {
+    position: absolute;
+    z-index: -1; /* Ensure blur is behind content */
+    filter: blur(100px);
+    border-radius: 50%;
+    opacity: 0.7;
+  }
+  
+  /* Blur Variants */
+  .blur-1 {
+    background: rgb(238 210 255 / 75%);
+    width: 20rem;
+    height: 20rem;
+    top: 20rem;
+    left: 1rem;
+  }
+  
+  .blur-2 {
+    background: #c1f5ff;
+    width: 25rem;
+    height: 25rem;
+    bottom: -10rem;
+    right: -10rem;
+  }
+  
+  /* Header Styling */
+  .about-header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .about-header .highlight {
+    color: orange;
+    font-weight: bold;
+  }
+  
+  /* Description Styling */
+  .about-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid orange;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Hover Effect */
+  .about-description:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .about-description {
+      font-size: 1rem;
+      padding: 1rem;
+    }
+  
+    .blur-1 {
+      width: 15rem;
+      height: 15rem;
+      top: -3rem;
+      left: -3rem;
+    }
+  
+    .blur-2 {
+      width: 18rem;
+      height: 18rem;
+      bottom: -5rem;
+      right: -5rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .about {
+      padding: 2rem 1rem;
+    }
+  
+    .about-header h2 {
+      font-size: 2rem;
+    }
+  
+    .about-description {
+      font-size: 0.9rem;
+      padding: 1rem;
+    }
+  }
+  
