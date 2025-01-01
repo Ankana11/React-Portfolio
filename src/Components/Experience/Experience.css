@@ -95,7 +95,7 @@
 
 /* Text box styling */
 .text-box {
-    background: var(--gradient-light);
+    /* background: var(--gradient-light); */
     color: #333;
     padding: 20px 30px;
     border-radius: 8px;

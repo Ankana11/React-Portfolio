@@ -10,7 +10,7 @@ function Experience() {
               <div className="ex-header ex">
         <h2>My <span className="highlight">Experiences</span></h2>
       </div>
-        <div className='main'>
+        {/* <div className='main'> */}
         <div className="timeline-wrapper">
     <div className='timeline'>
        
@@ -36,7 +36,7 @@ function Experience() {
     </div>
 </div>
 
-    </div>
+    {/* </div> */}
     </div>
   )
 }

@@ -1,0 +1,60 @@
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .portfolio span {
+    color: var(--black);
+    font-size: 1rem;
+    font-weight: 100;
+    margin-bottom: 2rem;
+  }
+  
+  /* Cards container */
+  .portfolio-row {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 2rem; /* Space between cards */
+    justify-content: center; /* Center align the cards */
+    width: 100%;
+  }
+  
+  /* Individual card styling */
+  .portfolio-card {
+    flex: 1 1 calc(25% - 2rem); /* 4 cards per row with space */
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .portfolio-card img {
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(-12px 15px 13px rgba(0, 0, 0, 0.25));
+    border-radius: 19px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Add hover effect */
+  .portfolio-card img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Responsive Design for Mobile View */
+  @media screen and (max-width: 768px) {
+    .portfolio-row {
+      flex-direction: column; /* Stack cards vertically */
+      gap: 1.5rem; /* Reduce space between cards */
+    }
+  
+    .portfolio-card {
+      flex: 1 1 100%; /* Cards take full width */
+      max-width: none; /* Remove max-width restriction */
+    }
+  }
+  
