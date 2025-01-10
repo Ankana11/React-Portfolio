@@ -8,7 +8,7 @@
   
   .portfolio span {
     color: var(--black);
-    font-size: 1rem;
+    font-size: 17px;
     font-weight: 100;
     margin-bottom: 2rem;
   }
@@ -17,7 +17,7 @@
   .portfolio-row {
     display: flex;
     flex-wrap: wrap; /* Allow wrapping */
-    gap: 2rem; /* Space between cards */
+    gap: 3rem; /* Space between cards */
     justify-content: center; /* Center align the cards */
     width: 100%;
   }

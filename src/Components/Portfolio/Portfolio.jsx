@@ -4,11 +4,11 @@ import Sidebar from "../../img/sidebar.png";
 import Ecommerce from "../../img/ecommerce.png";
 import HOC from "../../img/hoc.png";
 import MusicApp from "../../img/musicapp.png";
-import Modal from "../Modal/Modal";  // Import Modal component
+import Modal from "../Modal/Modal"; 
 
 
 const Portfolio = () => {
-  const [modalOpen, setModalOpen] = useState(false); // State to control modal visibility
+  const [modalOpen, setModalOpen] = useState(false); 
   const [projectDetails, setProjectDetails] = useState({});
 
   const projects = [
@@ -40,6 +40,13 @@ const Portfolio = () => {
       description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, quam, consequuntur alias officia inventore ea consectetur eligendi sed consequatur necessitatibus reprehenderit optio provident amet error!",
       stack: ["React", "JavaScript"]
     },
+    { 
+      id: 5, 
+      img: Sidebar, 
+      title: "HOC Project", 
+      description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda, quam, consequuntur alias officia inventore ea consectetur eligendi sed consequatur necessitatibus reprehenderit optio provident amet error!",
+      stack: ["React", "JavaScript"]
+    },
   ];
 
   const openModal = (project) => {
@@ -57,7 +64,7 @@ const Portfolio = () => {
       <div className="portfolio" id="portfolio">
         <h2 className="mb-4">Portfolio</h2>
 
-      {/* Cards container */}
+   
       <div className="portfolio-row">
         {projects.map((project) => (
           <div className="portfolio-card" key={project.id} onClick={() => openModal(project)}>
@@ -66,7 +73,7 @@ const Portfolio = () => {
         ))}
       </div>
 
-      {/* Modal Component */}
+   
       {modalOpen && (
         <Modal
           project={projectDetails}

@@ -1,4 +1,4 @@
-/* Modal overlay (fixed position to cover the screen) */
+
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -15,10 +15,11 @@
   /* Modal dialog box */
   .modal-dialog {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 6px;
     padding: 20px;
-    max-width: 600px;
-    width: 100%;
+    max-width: 550px;
+    max-height: 600px;
+    /* width: 100%; */
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
   }
   
@@ -30,49 +31,49 @@
   }
   
   .modal-title {
-    font-size: 1.5rem;
+    font-size: 20px;
     font-weight: bold;
   }
   
   .btn-close {
-    font-size: 1.25rem;
+    font-size: 15px;
     cursor: pointer;
   }
   
   /* Modal body */
   .modal-body {
-    margin-top: 10px;
+    margin-top: 8px;
     text-align: center;
   }
   
   .modal-footer {
-    margin-top: 20px;
+    /* margin-top: 15px; */
     display: flex;
     justify-content: space-between;
   }
-  /* Badge style for the tech stack */
+ 
 .tech-stack {
-    margin-top: 10px;
+    margin-top: 8px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    font-size: 10px;
   }
   
   .badge {
-    font-size: 0.8rem;   /* Smaller font size */
-    padding: 4px 8px;    /* Reduced padding */
-    border-radius: 12px; /* Smaller border-radius for a more compact badge */
-    text-transform: capitalize;
-    background-color: #007bff; /* Light blue background */
-    color: #fff;   /* White text */
+    font-size: 10px;  
+    padding: 2px 6px;    
+    background-color: #007bff; 
+    color: #fff;   
   }
   
   .badge-rounded-pill {
-    border-radius: 50px;  /* Rounded edges */
+    border-radius: 50px; 
   }
   
-  /* Optional: Style to make the badges look more subtle */
+
   .badge.text-bg-primary {
-    background-color: #007bff; /* Primary blue */
+    background-color: #007bff; 
     color: #fff;
+    font-size: 2px;
   }
