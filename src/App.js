@@ -2,7 +2,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Intro from "./Components/Intro/Intro";
 import About from "./Components/About/About";
 import Skills from "./Components/Skills/Skills";
-// import Experience from "./Components/Experience/Experience";
+import Experience from "./Components/Experience/Experience";
 import "./App.css";
 import Portfolio from "./Components/Portfolio/Portfolio";
 
@@ -13,7 +13,7 @@ function App() {
       <Intro/>
       <About/>
       <Skills/>
-      {/* <Experience/> */}
+      <Experience/>
       <Portfolio/>
     </div>
   );
