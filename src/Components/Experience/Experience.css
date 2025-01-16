@@ -216,8 +216,13 @@
     filter: drop-shadow(0 0 0.75rem rgb(57, 56, 56));
     
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
+    /* Hide image (me) in mobile view */
+    .ex-header img {
+        display: none;
+    }
 
+    /* Adjust the timeline's layout */
     .timeline {
         margin: 50px auto;
     }
@@ -228,34 +233,38 @@
 
     .container {
         width: 100%;
-        padding-left: 80px;
-        padding-right: 25px;
+        padding-left: 30px; /* Adjust padding */
+        padding-right: 30px; /* Adjust padding */
     }
 
+    /* Make text-box font-size responsive */
     .text-box {
-        font-size: 13px;
+        font-size: 14px; /* Slightly smaller font size for better readability */
     }
 
     .text-box small {
         margin-bottom: 10px;
     }
 
+    /* Adjust container and circle position */
     .right-container {
         left: 0;
     }
+
     .circle {
         left: 21px;
     }
+
     .right-container .circle {
         left: 21px;
     }
 
     .right-container img,
     .left-container img {
-        
         left: 10px;
     }
-    .right-container img{
+
+    .right-container img {
         margin-left: 0;
     }
 
@@ -265,5 +274,13 @@
         border-right: 15px solid #fff;
         border-left: 0;
     }
-    
+
+    /* Adjust the header text for smaller screens */
+    .ex-header h2 {
+        font-size: 1.8rem; /* Smaller font size */
+    }
+
+    .ex-header .highlight {
+        font-size: 1.8rem; /* Smaller highlighted text size */
+    }
 }
