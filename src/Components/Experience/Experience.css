@@ -39,23 +39,14 @@
     opacity: 0.6;
 }
 
-
-.blur-1 {
-    width: 250px;
-    height: 250px;
-    top: 23px;
-    left: 350px;
-    background: linear-gradient(135deg, rgba(0, 171, 240, 0.6), rgba(193, 245, 255, 0.8));
+.t-blur1{
+    left: 39rem;
+    top: 15rem;
 }
-
-.blur-2 {
-    width: 300px;
-    height: 300px;
-   
-  left: 0px;
-    background: linear-gradient(135deg, rgba(255, 183, 0, 0.6), rgba(255, 234, 187, 0.8));
+.t-blur2{
+    top: 0rem;
+    left: -7rem;
 }
-
   .ex{
     text-align: center;
   }
@@ -74,8 +65,10 @@
 .text-box {
     color: #333;
     padding: 20px 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.26);
+    border: 7px solid var(--blueCard);
+    box-shadow: var(--boxShadow);
+    border-radius: 20px;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -136,8 +129,8 @@
     left: -25%;
 }
 .container img {
-    width: 60px;
-    height: 60px;
+    width: 46px;
+    height: 46px;
     position: absolute;
     border-radius: 50%;
     background: white;
@@ -147,10 +140,11 @@
 }
 
 .right-container img {
-    left: -20px;
+    left: -15px;
 }
 .left-container img {
     right: -20px;
+    top: -1px;
 }
 .pic{
     left: 10px;
@@ -197,7 +191,8 @@
     right: -15px;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-left: 15px solid #fff;
+    background: rgba(255, 255, 255, 0.26);
+    border-left: 7px solid var(--blueCard);
 }
 .right-container-arrow {
     height: 0;
@@ -208,7 +203,18 @@
     left: -14px;
     border-top: 15px solid transparent;
     border-bottom: 15px solid transparent;
-    border-right: 15px solid #fff;
+    background: rgba(255, 255, 255, 0.26);
+    border-right: 7px solid var(--blueCard);
+}
+
+
+.ex img{
+    width: 12vw;
+    position: absolute;
+    top: 11rem;
+    left: 65%;
+    filter: drop-shadow(0 0 0.75rem rgb(57, 56, 56));
+    
 }
 @media screen and (max-width: 600px) {
 
