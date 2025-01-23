@@ -4,14 +4,14 @@ import Card from "../Card/Card";
 import HeartEmoji from "../../img/heartemoji.png";
 import Glasses from "../../img/glasses.png";
 import Humble from "../../img/humble.png";
-// import { themeContext } from "../../Context";
+import { themeContext } from "../../Context";
 // import { motion } from "framer-motion";
 // import Resume from './resume.pdf';
 
 const Services = () => {
   // context
-//   const theme = useContext(themeContext);
-//   const darkMode = theme.state.darkMode;
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
 
   // transition
   const transition = {
@@ -24,7 +24,7 @@ const Services = () => {
       {/* left side */}
       <div className="awesome">
         {/* dark mode */}
-        <span >Here Is My</span>
+        <span style={{ color: darkMode ? "white" : "" }} >Here Is My</span>
         <span>Skills 🚀</span>
         
         <a href="/" download>

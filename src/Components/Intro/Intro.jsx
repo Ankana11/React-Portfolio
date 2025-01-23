@@ -13,7 +13,7 @@ import FloatinDiv from "../FloatingDiv/FloatingDiv";
 import Github from "../../img/github.png";
 import LinkedIn from "../../img/linkedin.png";
 import Instagram from "../../img/instagram.png";
-// import { themeContext } from "../../Context";
+import { themeContext } from "../../Context";
 // import { motion } from "framer-motion";
 import { Link } from "react-scroll";
 const Intro = () => {
@@ -21,8 +21,8 @@ const Intro = () => {
   const transition = { duration: 2, type: "spring" };
 
   // context
-//   const theme = useContext(themeContext);
-//   const darkMode = theme.state.darkMode;
+  const theme = useContext(themeContext);
+  const darkMode = theme.state.darkMode;
 
   return (
     <div className="Intro" id="Intro">
@@ -42,11 +42,9 @@ const Intro = () => {
       <div className="i-left" >
         <div className="i-name">
           {/* yahan change hy darkmode ka */}
-          <span>Hey! I Am</span>
+          <span style={{ color: darkMode ? "white" : "" }}>Hey! I Am</span>
           <span>Ankana Das</span>
-          <span>
-         A Design Centric Software Developer
-          </span>
+          <span style={{ color: darkMode ? "white" : "" }}>A Design Centric Software Developer</span>
         </div>
         <Link to="contact" smooth={true} spy={true}>
           <button className="button i-button">Know me</button>
@@ -68,11 +66,11 @@ const Intro = () => {
   <FloatinDiv
     img={code}
     text1="Developer"
-    style={{ transform: "scale(0.9)" }} // Custom scaling for this instance
+    style={{ transform: "scale(0.9)" }} 
   />
 </div>
 
-<div style={{ position: "absolute", top: "18rem", left: "0rem" }}>
+<div style={{ position: "absolute", top: "17rem", left: "0rem" }}>
   <FloatinDiv
     img={thumbup}
     text1="Designer"
