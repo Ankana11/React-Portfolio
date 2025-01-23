@@ -6,7 +6,7 @@ const Card = ({emoji, heading, detail, color}) => {
     const darkMode = theme.state.darkMode;
   return (
     <div className="card" style={{ borderColor: color || "var(--orangeCard)" }}> 
-      <img src={emoji} alt="" />
+      {/* <img src={emoji} alt="" /> */}
       <span style={{ color: darkMode ? "white" : "" }}>{heading}</span>
       <span style={{ color: darkMode ? "white" : "" }}>{detail}</span>
      

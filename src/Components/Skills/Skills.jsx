@@ -41,7 +41,7 @@ const Services = () => {
             <Card
            emoji={HeartEmoji}
            heading={"Frontend"}
-           detail={<ul><li>React.js</li><li>CSS</li></ul>}
+           detail={<ul><li>React.js</li><li>Figma</li><li>HTML</li><li>CSS</li><li>Bootstrap</li></ul>}
           //  color="rgba(255, 0, 0, 0.3)"
  
         />
@@ -51,7 +51,7 @@ const Services = () => {
           <Card
             emoji={Glasses}
             heading={"Backend"}
-            detail={<ul><li>PHP</li><li>JavaScript</li></ul>
+            detail={<ul><li>PHP</li><li>JavaScript</li><li>Python</li><li>Django</li><li>Laravel</li><li>MySQL</li><li>NextJs</li><li>MongoDB</li></ul>
             }
           />
         </div>
@@ -59,7 +59,7 @@ const Services = () => {
           <Card
               emoji={Humble}
               heading={"Others"}
-              detail={<ul><li>Git</li><li>GitHub</li></ul>}
+              detail={<ul><li>Git</li><li>GitHub</li><li>UX/UI</li><li>ChatGPT</li><li>Gen AI</li></ul>}
             color="rgba(252, 166, 31, 0.45)"
           />
           </div>
