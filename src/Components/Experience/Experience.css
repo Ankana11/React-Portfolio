@@ -1,5 +1,5 @@
 :root {
-    --main-color: #f09400;
+    --main-color: #ffbb33; 
     --highlight-color: orange;
     --background-light: #f5f7fa;
     --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
@@ -87,7 +87,7 @@
     left: 50%;
     height: 100%;
     transform: translateX(-50%);
-    z-index: -1;
+    z-index: 0;
 }
 
 
@@ -128,21 +128,20 @@
 .left-container {
     left: -25%;
 }
-.container img {
+.container .circle {
     width: 46px;
     height: 46px;
     position: absolute;
     border-radius: 50%;
-    background: white;
-    border: 2px solid var(--main-color);
+    background: var(--main-color); /* Same background color */
+    border: 2px solid var(--main-color); /* Optional border */
     top: 10px;
     z-index: 10;
 }
-
-.right-container img {
+.right-container .circle {
     left: -15px;
 }
-.left-container img {
+.left-container .circle {
     right: -20px;
     top: -1px;
 }
@@ -158,11 +157,11 @@
     position: absolute;
     width: 6px;
     height: 100%;
-    background: orange;
+    background:  var(--main-color);
     top: 0;
     left: 50%;
     margin-left: -3px;
-    z-index: -1;
+    z-index: 0;
     animation: moveline 4s linear forwards;
 }
 
@@ -216,39 +215,47 @@
     filter: drop-shadow(0 0 0.75rem rgb(57, 56, 56));
     
 }
+
 @media screen and (max-width: 768px) {
-    /* Hide image (me) in mobile view */
+ 
     .ex-header img {
         display: none;
     }
 
-    /* Adjust the timeline's layout */
     .timeline {
         margin: 50px auto;
     }
 
     .timeline::after {
-        left: 31px;
+       display: none;
     }
 
     .container {
         width: 100%;
-        padding-left: 30px; /* Adjust padding */
-        padding-right: 30px; /* Adjust padding */
+        padding-left: 30px; 
+        padding-right: 30px;
     }
 
-    /* Make text-box font-size responsive */
-    .text-box {
-        font-size: 14px; /* Slightly smaller font size for better readability */
+
+    .left-container .text-box {
+        font-size: 14px; 
+        left: 3rem;
+        max-width: 100%;
+    }
+
+    .container h4 p{
+        font-size: 17px;
     }
 
     .text-box small {
         margin-bottom: 10px;
     }
 
-    /* Adjust container and circle position */
     .right-container {
-        left: 0;
+        left: -24px;
+        font-size: 14px; 
+      
+        max-width: 100%;
     }
 
     .circle {
@@ -256,31 +263,19 @@
     }
 
     .right-container .circle {
-        left: 21px;
+       display: none;
     }
-
-    .right-container img,
-    .left-container img {
-        left: 10px;
-    }
-
-    .right-container img {
-        margin-left: 0;
+    .left-container .circle {
+     display: none;
     }
 
     .left-container-arrow,
     .right-container-arrow {
-        left: -15px;
-        border-right: 15px solid #fff;
-        border-left: 0;
+       display: none;
     }
 
-    /* Adjust the header text for smaller screens */
-    .ex-header h2 {
-        font-size: 1.8rem; /* Smaller font size */
-    }
 
     .ex-header .highlight {
-        font-size: 1.8rem; /* Smaller highlighted text size */
+        font-size: 1.8rem; 
     }
 }

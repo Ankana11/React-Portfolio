@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./Intro.css";
 import Vector1 from "../../img/Vector1.png";
 import Vector2 from "../../img/Vector2.png";
@@ -15,6 +15,9 @@ import Instagram from "../../img/instagram.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import { Link } from "react-scroll";
+
+
+import CLOUDS from 'vanta/src/vanta.clouds';
 const Intro = () => {
   // Transition
   const transition = { duration: 2, type: "spring" };
@@ -22,6 +25,12 @@ const Intro = () => {
   // context
   const theme = useContext(themeContext);
   const darkMode = theme.state.darkMode;
+
+// useEffect(()=>{
+//   CLOUDS({
+//     el:'#left'
+//   })
+// }, [])
 
   return (
     <div className="Intro" id="Intro">
@@ -33,7 +42,7 @@ const Intro = () => {
 
         
        }}></div>
-      <div className="i-left" >
+      <div className="i-left" id="left" >
         <div className="i-name">
           {/* yahan change hy darkmode ka */}
           <span style={{ color: darkMode ? "white" : "" }}>Hey! I Am</span>
@@ -64,21 +73,46 @@ const Intro = () => {
           src={glassesimoji}
           alt=""
         />
-        <div style={{ position: "absolute", top: "-2%", left: "62%" }}>
+
+
+        {/* <div style={{ position: "absolute", top: "-2%", left: "62%" }}>
   <FloatinDiv
     img={code}
     text1="Developer"
     style={{ transform: "scale(0.9)" }} 
   />
-</div>
+</div> */}
 
-<div style={{ position: "absolute", top: "17rem", left: "0rem" }}>
+
+<motion.div
+          initial={{ top: "-4%", left: "74%" }}
+          whileInView={{ left: "62%" }}
+          transition={transition}
+          className="floating-div"
+        >
+          <FloatinDiv img={code} text1="Developer"  style={{ transform: "scale(0.9)" }}  />
+        </motion.div>
+
+
+
+{/* <div style={{ position: "absolute", top: "17rem", left: "0rem" }}>
   <FloatinDiv
     img={thumbup}
     text1="Designer"
     style={{ transform: "scale(0.9)" }} // Custom scaling for this instance
   />
-</div>
+</div> */}
+
+
+<motion.div
+  initial={{ left: "-9rem", top: "17rem" }}
+  whileInView={{ left: "0rem" }}
+  transition={transition}
+  className="floating-div"
+>
+  {/* floatinDiv mein change hy dark mode ka */}
+  <FloatinDiv img={thumbup} text1="Designer"   style={{ transform: "scale(0.9)" }}   />
+</motion.div>
 
         <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>
         <div

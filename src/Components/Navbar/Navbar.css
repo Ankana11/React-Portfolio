@@ -1,50 +1,91 @@
 .n-wrapper {
-    height: 10vh;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-    top: 0;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  top: 0;
+}
+
+.n-left {
+  flex: 1;
+  align-items: center;
+  justify-content: left;
+  display: flex;
+  gap: 2rem;
+}
+
+.n-name {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.n-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.n-list {
+  flex: 10;
+  transition: max-height 0.3s ease-out;
+}
+
+.n-list ul {
+  display: flex;
+  gap: 2rem;
+  margin-right: 4rem;
+}
+
+.n-list ul li {
+  text-align: center;
+}
+
+.n-list ul li:hover {
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .hamburger {
+    display: block; /* Show hamburger menu on small screens */
+    font-size: 1.5rem;
   }
-  .n-left {
-    flex: 1;
-    align-items: center;
-    justify-content: left;
-    display: flex;
-    gap: 2rem;
-  }
-  
-  .n-name {
-    font-size: 1.3rem;
-    font-weight: bold;
-  }
-  .n-right {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    font-weight: 400;
-  }
-  
+
   .n-list {
-    flex: 10;
-  }
-  .n-list > ul {
     display: flex;
-    gap: 2rem;
-    margin-right: 4rem;
+    flex-direction: column;
+    position: absolute;
+    /* align-items: center;
+    justify-content: center; */
+    top: 10vh;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    z-index: 100;
+    border-radius: 0 0 10px 10px;
   }
-  
-  .n-list > ul :hover {
-    color: var(--orange);
-    cursor: pointer;
+
+  .n-list.open {
+    max-height: 350px; /* Expand menu when open */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
-  
-  .n-button {
-    flex: 2;
+
+  .n-list ul {
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    padding: 0;
   }
-  
-  @media screen and (max-width: 480px) {
-    .n-list {
-      display: none;
-    }
+
+  .n-list ul li {
+    padding: 0;
   }
+}

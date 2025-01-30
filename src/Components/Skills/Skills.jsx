@@ -5,7 +5,7 @@ import HeartEmoji from "../../img/heartemoji.png";
 import Glasses from "../../img/glasses.png";
 import Humble from "../../img/humble.png";
 import { themeContext } from "../../Context";
-// import { motion } from "framer-motion";
+import { motion } from "framer-motion";
 // import Resume from './resume.pdf';
 
 const Services = () => {
@@ -37,33 +37,48 @@ const Services = () => {
             <div className="cards">
               
                 {/* first card */}
-            <div style={{ left: "27rem" }}>
+                <motion.div
+          initial={{ left: "20rem" }}
+          whileInView={{ left: "25rem" }}
+          transition={transition}
+        >
+       
             <Card
-           emoji={HeartEmoji}
            heading={"Frontend"}
-           detail={<ul><li>React.js</li><li>Figma</li><li>HTML</li><li>CSS</li><li>Bootstrap</li></ul>}
-          //  color="rgba(255, 0, 0, 0.3)"
+           detail={<ul><li>React.js</li><li>Bootstrap</li><li>Figma</li><li>HTML</li><li>CSS</li></ul>}
+        
  
         />
-       </div>
-         
-       <div style={{ top: "10rem", left: "9rem" }}>
+          </motion.div>
+      
+{/* 2nd */}
+       <motion.div
+          initial={{ left: "-4rem", top: "10rem" }}
+          whileInView={{ left: "9rem" }}
+          transition={transition}
+        >  
+     
           <Card
-            emoji={Glasses}
+           
             heading={"Backend"}
-            detail={<ul><li>PHP</li><li>JavaScript</li><li>Python</li><li>Django</li><li>Laravel</li><li>MySQL</li><li>NextJs</li><li>MongoDB</li></ul>
+            detail={<ul><li>PHP</li><li>JavaScript</li><li>Python</li><li>Django</li><li>Laravel</li><li>MySQL</li></ul>
             }
           />
-        </div>
-        <div style={{ top: "17rem", left: "24rem" }}>
+       </motion.div>
+       {/* 3rd */}
+    
+        <motion.div
+          initial={{ top: "15rem", left: "12rem" }}
+          whileInView={{ left: "24rem" }}
+          transition={transition}
+        >
           <Card
-              emoji={Humble}
               heading={"Others"}
               detail={<ul><li>Git</li><li>GitHub</li><li>UX/UI</li><li>ChatGPT</li><li>Gen AI</li></ul>}
             color="rgba(252, 166, 31, 0.45)"
           />
-          </div>
-        {/* </motion.div> */}
+       
+        </motion.div>
         <div
           className="blur s-blur2"
           style={{ background: "var(--purple)" }}
